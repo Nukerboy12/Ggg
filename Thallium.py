@@ -35,16 +35,24 @@ __proxies__, __client__, __config__, __threads__= cycle(open("proxies.txt", "r")
 token = input("{}({}Thallium{}) Enter Token{}:{} ".format("\x1b[0m", "\x1b[38;5;122m", "\x1b[0m", "\x1b[38;5;122m", "\x1b[0m"))
 os.system("cls") if os.name == "nt" else os.system("clear")
 
-Thallium_art = """
-       {} ████████╗██╗  ██╗ █████╗ ██╗     ██╗     ██╗██╗   ██╗███╗   ███╗
-       {} ╚══██╔══╝██║  ██║██╔══██╗██║     ██║     ██║██║   ██║████╗ ████║
-       {}    ██║   ███████║███████║██║     ██║     ██║██║   ██║██╔████╔██║
-       {}    ██║   ██╔══██║██╔══██║██║     ██║     ██║██║   ██║██║╚██╔╝██║
-       {}    ██║   ██║  ██║██║  ██║███████╗███████╗██║╚██████╔╝██║ ╚═╝ ██║
-       {}    ╚═╝   ╚═╝  ╚═╝╚═╝  ╚═╝╚══════╝╚══════╝╚═╝ ╚═════╝ ╚═╝     ╚═╝
-      {} =============================== HR/NT ==================================
-      {}   Hacking Raiders | Aizer & Virus & Saurav On Top discord.gg/hackersop
-      {} =============================== HR/NT =================================={}
+Superstar_art = """
+
+{}░██████╗██╗░░░██╗██████╗░███████╗██████╗░░██████╗████████╗░█████╗░
+{}██╔════╝██║░░░██║██╔══██╗██╔════╝██╔══██╗██╔════╝╚══██╔══╝██╔══██╗
+{}╚█████╗░██║░░░██║██████╔╝█████╗░░██████╔╝╚█████╗░░░░██║░░░███████║
+{}░╚═══██╗██║░░░██║██╔═══╝░██╔══╝░░██╔══██╗░╚═══██╗░░░██║░░░██╔══██║
+{}██████╔╝╚██████╔╝██║░░░░░███████╗██║░░██║██████╔╝░░░██║░░░██║░░██║
+╚═════╝░░╚═════╝░╚═╝░░░░░╚══════╝╚═╝░░╚═╝╚═════╝░░░░╚═╝░░░╚═╝░░╚═╝
+
+{}░█████╗░██████╗░
+{}██╔══██╗██╔══██╗
+{}██║░░██║██████╔╝
+{}██║░░██║██╔═══╝░
+{}╚█████╔╝██║░░░░░
+{}░╚════╝░╚═╝░░░░░      
+      {} =============================== ELITE STORE ==================================
+      {}   
+      {} =============================== ELITE STORE =================================={}
 """.format("\x1b[38;5;122m", "\x1b[38;5;122m", "\x1b[38;5;122m", "\x1b[38;5;122m", "\x1b[38;5;122m", "\x1b[0m", "\x1b[38;5;122m", "\x1b[38;5;83m", "\x1b[38;5;122m", "\x1b[0m")
 options = """
          ╚╦╗                                                             ╔╦╝
@@ -61,7 +69,7 @@ options = """
            "\x1b[38;5;122m", "\x1b[0m", "\x1b[38;5;122m", "\x1b[0m", "\x1b[38;5;122m", "\x1b[0m", "\x1b[38;5;122m", "\x1b[0m", "\x1b[38;5;122m", "\x1b[0m", "\x1b[38;5;122m", "\x1b[0m")
 
 
-class Thallium:
+class Superstar:
     def __init__(self):
         self.proxy = "http://" + next(__proxies__) if __config__["proxy"] == True else None
         self.session = httpx.Client(proxies=self.proxy)
@@ -273,12 +281,12 @@ class Thallium:
 
     
     def menu(self):
-        os.system(f"cls & title Thallium Nuker ^| Authenticated as: {__client__.user.name}#{__client__.user.discriminator}")
-        print(Thallium_art + options + "\n")
-        ans = input("{}({}Thallium{}) Option{}:{} ".format("\x1b[0m", "\x1b[38;5;122m", "\x1b[0m", "\x1b[38;5;122m", "\x1b[0m")) 
+        os.system(f"cls & title Superstar Nuker ^| Authenticated as: {__client__.user.name}#{__client__.user.discriminator}")
+        print(Superstar_art + options + "\n")
+        ans = input("{}({}Superstar{}) Option{}:{} ".format("\x1b[0m", "\x1b[38;5;122m", "\x1b[0m", "\x1b[38;5;122m", "\x1b[0m")) 
         
         if ans in ["1", "01"]:
-            scrape = input("{}({}Thallium{}) Fetch IDs [Y/N]{}:{} ".format("\x1b[0m", "\x1b[38;5;122m", "\x1b[0m", "\x1b[38;5;122m", "\x1b[0m"))
+            scrape = input("{}({}Superstar{}) Fetch IDs [Y/N]{}:{} ".format("\x1b[0m", "\x1b[38;5;122m", "\x1b[0m", "\x1b[38;5;122m", "\x1b[0m"))
             if scrape.lower() == "y":
                 try:
                     guild = __client__.get_guild(int(guildid))
@@ -297,7 +305,7 @@ class Thallium:
                     t.join()
                     
             time.sleep(3)
-            print("{}({}Thallium{}) Banned {}/{}".format("\x1b[0m", "\x1b[38;5;122m", "\x1b[0m", len(self.banned), len(members)))
+            print("{}({}Superstar{}) Banned {}/{}".format("\x1b[0m", "\x1b[38;5;122m", "\x1b[0m", len(self.banned), len(members)))
             time.sleep(1.5)
             self.menu()
             
@@ -311,20 +319,20 @@ class Thallium:
                     t.join()
             
             time.sleep(3)
-            print("{}({}Thallium{}) Kicked {}/{}".format("\x1b[0m", "\x1b[38;5;122m", "\x1b[0m", len(self.kicked), len(members)))
+            print("{}({}Superstar{}) Kicked {}/{}".format("\x1b[0m", "\x1b[38;5;122m", "\x1b[0m", len(self.kicked), len(members)))
             time.sleep(1.5)
             self.menu()
             
         elif ans in ["3", "03"]:
-            days = int(input("{}({}Thallium{}) Days{}:{} ".format("\x1b[0m", "\x1b[38;5;122m", "\x1b[0m", "\x1b[38;5;122m", "\x1b[0m")))
+            days = int(input("{}({}Superstar{}) Days{}:{} ".format("\x1b[0m", "\x1b[38;5;122m", "\x1b[0m", "\x1b[38;5;122m", "\x1b[0m")))
             self.execute_prune(guildid, days, token)
             time.sleep(1.5)
             self.menu()
             
         elif ans in ["4", "04"]:
-            type = input("{}({}Thallium{}) Channels Type ['t', 'v']{}:{} ".format("\x1b[0m", "\x1b[38;5;122m", "\x1b[0m", "\x1b[38;5;122m", "\x1b[0m"))
+            type = input("{}({}Superstar{}) Channels Type ['t', 'v']{}:{} ".format("\x1b[0m", "\x1b[38;5;122m", "\x1b[0m", "\x1b[38;5;122m", "\x1b[0m"))
             type = 2 if type == "v" else 0
-            amount = int(input("{}({}Thallium{}) Amount{}:{} ".format("\x1b[0m", "\x1b[38;5;122m", "\x1b[0m", "\x1b[38;5;122m", "\x1b[0m")))
+            amount = int(input("{}({}Superstar{}) Amount{}:{} ".format("\x1b[0m", "\x1b[38;5;122m", "\x1b[0m", "\x1b[38;5;122m", "\x1b[0m")))
             self.channels.clear()
             for i in range(amount):
                 t = threading.Thread(target=self.execute_crechannels, args=(guildid, random.choice(chaizer), type, token))
@@ -333,12 +341,12 @@ class Thallium:
                     t.join()
                 
             time.sleep(3)
-            print("{}({}Thallium{}) Created {}/{} channels".format("\x1b[0m", "\x1b[38;5;122m", "\x1b[0m", len(self.channels), amount))
+            print("{}({}Superstar{}) Created {}/{} channels".format("\x1b[0m", "\x1b[38;5;122m", "\x1b[0m", len(self.channels), amount))
             time.sleep(1.5)
             self.menu()
             
         elif ans in ["5", "05"]:
-            amount = int(input("{}({}Thallium{}) Amount{}:{} ".format("\x1b[0m", "\x1b[38;5;122m", "\x1b[0m", "\x1b[38;5;122m", "\x1b[0m")))
+            amount = int(input("{}({}Superstar{}) Amount{}:{} ".format("\x1b[0m", "\x1b[38;5;122m", "\x1b[0m", "\x1b[38;5;122m", "\x1b[0m")))
             self.roles.clear()
             for i in range(amount):
                 t = threading.Thread(target=self.execute_creroles, args=(guildid, random.choice(chaizer), token))
@@ -347,7 +355,7 @@ class Thallium:
                     t.join()
                 
             time.sleep(3)
-            print("{}({}Thallium{}) Created {}/{} roles".format("\x1b[0m", "\x1b[38;5;122m", "\x1b[0m", len(self.roles), amount))
+            print("{}({}Superstar{}) Created {}/{} roles".format("\x1b[0m", "\x1b[38;5;122m", "\x1b[0m", len(self.roles), amount))
             time.sleep(1.5)
             self.menu()
             
@@ -361,7 +369,7 @@ class Thallium:
                     t.join()
                 
             time.sleep(3)
-            print("{}({}Thallium{}) Deleted {}/{} channels".format("\x1b[0m", "\x1b[38;5;122m", "\x1b[0m", len(self.channels), len(channels)))
+            print("{}({}Superstar{}) Deleted {}/{} channels".format("\x1b[0m", "\x1b[38;5;122m", "\x1b[0m", len(self.channels), len(channels)))
             time.sleep(1.5)
             self.menu()
             
@@ -375,7 +383,7 @@ class Thallium:
                     t.join()
                 
             time.sleep(3)
-            print("{}({}Thallium{}) Deleted {}/{} roles".format("\x1b[0m", "\x1b[38;5;122m", "\x1b[0m", len(self.roles), len(roles)))
+            print("{}({}Superstar{}) Deleted {}/{} roles".format("\x1b[0m", "\x1b[38;5;122m", "\x1b[0m", len(self.roles), len(roles)))
             time.sleep(1.5)
             self.menu()
             
@@ -389,13 +397,13 @@ class Thallium:
                     t.join()
                     
             time.sleep(3)
-            print("{}({}Thallium{}) Deleted {}/{} emojis".format("\x1b[0m", "\x1b[38;5;122m", "\x1b[0m", len(self.emojis), len(emojis)))
+            print("{}({}Superstar{}) Deleted {}/{} emojis".format("\x1b[0m", "\x1b[38;5;122m", "\x1b[0m", len(self.emojis), len(emojis)))
             time.sleep(1.5)
             self.menu()
             
         elif ans in ["9", "09"]:
             self.messages.clear(); self.channels.clear()
-            amount = int(input("{}({}Thallium{}) Amount{}:{} ".format("\x1b[0m", "\x1b[38;5;122m", "\x1b[0m", "\x1b[38;5;122m", "\x1b[0m")))
+            amount = int(input("{}({}Superstar{}) Amount{}:{} ".format("\x1b[0m", "\x1b[38;5;122m", "\x1b[0m", "\x1b[38;5;122m", "\x1b[0m")))
             channels = self.session.get(f"https://discord.com/api/v9/guilds/{guildid}/channels", headers={"Authorization": f"Bot {token}"}).json()
             for channel in channels: self.channels.append(channel['id'])
             channelz = cycle(self.channels)
@@ -406,7 +414,7 @@ class Thallium:
                     t.join()
                     
             time.sleep(3)
-            print("{}({}Thallium{}) Spammed {}/{} messages".format("\x1b[0m", "\x1b[38;5;122m", "\x1b[0m", len(self.messages), amount))
+            print("{}({}Superstar{}) Spammed {}/{} messages".format("\x1b[0m", "\x1b[38;5;122m", "\x1b[0m", len(self.messages), amount))
             time.sleep(1.5)
             self.menu()
             
@@ -415,39 +423,39 @@ class Thallium:
                 response = self.session.get("https://github.com/notAizer/Thallium-Nuker/releases/latest")
                 check_version = response.headers.get('location').split('/')[7].split('v')[1]
                 if VERSION != check_version:
-                    print("{}({}Thallium{}) You're using an outdated version!".format("\x1b[0m", "\x1b[38;5;122m", "\x1b[0m"))
-                    webbrowser.open(f"https://github.com/notAizer/Thallium-Nuker/releases/tag/{check_version}")
+                    print("{}({}Superstar{}) You're using an outdated version!".format("\x1b[0m", "\x1b[38;5;122m", "\x1b[0m"))
+                    webbrowser.open(f"COMING}")
                 else:
-                    print("{}({}Thallium{}) You're using the current version!".format("\x1b[0m", "\x1b[38;5;122m", "\x1b[0m"))
+                    print("{}({}Superstar{}) You're using the current version!".format("\x1b[0m", "\x1b[38;5;122m", "\x1b[0m"))
             except:
-                print("{}({}Thallium{}) Couldn't reach the releases!".format("\x1b[0m", "\x1b[38;5;122m", "\x1b[0m"))
+                print("{}({}Superstar{}) Couldn't reach the releases!".format("\x1b[0m", "\x1b[38;5;122m", "\x1b[0m"))
             
             time.sleep(1.5)
             self.menu()
     
         
         elif ans == "11":
-            print("Developed By hr development | Developed By Aizer X Virus X Saurav || Join :- Hr https://discord.gg/hackersop || You-tube :-  https://youtube.com/@nukersop")
-            input("")
+            print("Developed By Superstar development | Developed By SUPERSTAR || Join :- ELITE STORE  || You-tube :-  COMING")
+            input(""
             self.menu()
         
         elif ans == "12":
-            print("{}({}Thallium{}) Thanks for using Thallium!".format("\x1b[0m", "\x1b[38;5;122m", "\x1b[0m"))
+            print("{}({}Superstar{}) Thanks for using Thallium!".format("\x1b[0m", "\x1b[38;5;122m", "\x1b[0m"))
             time.sleep(1.5)
             os._exit(0)
             
     
 @__client__.event
 async def on_ready():
-    print("{}({}Thallium{}) Authenticated as{}: {}{}".format("\x1b[0m", "\x1b[38;5;122m", "\x1b[0m", "\x1b[38;5;122m", "\x1b[0m", f"{__client__.user.name}#{__client__.user.discriminator}"))
+    print("{}({}Superstar}) Authenticated as{}: {}{}".format("\x1b[0m", "\x1b[38;5;122m", "\x1b[0m", "\x1b[38;5;122m", "\x1b[0m", f"{__client__.user.name}#{__client__.user.discriminator}"))
     time.sleep(1.5)
     Thallium().menu()
     
 
 if __name__ == "__main__":
     try:
-        os.system("title Thallium Nuker ^| Authentication & mode con: cols=95 lines=25")
-        guildid = input("{}({}Thallium{}) Guild ID{}:{} ".format("\x1b[0m", "\x1b[38;5;122m", "\x1b[0m", "\x1b[38;5;122m", "\x1b[0m"))
+        os.system("title Superstar Nuker ^| Authentication & mode con: cols=95 lines=25")
+        guildid = input("{}({}Superstar{}) Guild ID{}:{} ".format("\x1b[0m", "\x1b[38;5;122m", "\x1b[0m", "\x1b[38;5;122m", "\x1b[0m"))
         __client__.run(token, bot=True)
     except Exception as e:
         print("{}({}-{}) {}".format("\x1b[0m", "\x1b[31m", "\x1b[0m", e))
